@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telegram Web App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <h2>Введите данные:</h2>
+    <form>
+        <input type="text" id="inputField" placeholder="Введите здесь">
+        <button type="button" onclick="sendData()">Отправить</button>
+    </form>
+
+    <script>
+        function sendData() {
+            const data = document.getElementById('inputField').value;
+            Telegram.WebApp.sendData(data);
+        }
+    </script>
+</body>
+</html>
